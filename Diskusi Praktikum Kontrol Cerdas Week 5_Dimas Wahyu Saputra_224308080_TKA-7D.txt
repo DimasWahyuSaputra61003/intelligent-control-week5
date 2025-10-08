@@ -1,0 +1,25 @@
+Nama: Dimas Wahyu Saputra
+NIM: 224308080
+Kelas: TKA-7D
+
+Diskusi Hasil:
+1. Apa kelebihan dan kelemahan DQN dibandingkan metode Q-Learning klasik?
+  - Kelebihan DQN:1. Mengatasi ruang keadaan yang besar
+                  2. Mengekstrak fitur otomatis
+                  3. Generalisasi
+                  4. Kinerja yang unggul pada tugas kompleks
+
+  - Kelemahan DQN: 1. Ketidakstabilan pelatihan (Traning)
+                   2. Keterbatasan pada aksi kontinu
+                   3. Ketergantungan data
+                  
+2. Bagaimana cara mengadaptasi DQN untuk kontrol sistem dinamis seperti drone atau robot industri?
+- 1. Penyesuaian Ruang Aksi (Action Space)
+DQN standar hanya dapat menangani aksi diskret (terhitung).Sistem dinamis           seringkali memerlukan aksi kontinu (misalnya, nilai torsi motor, sudut kemudi)
+- 2. efinisi Keadaan (State) dan Imbalan (Reward)
+Keadaan (State): 
+Input ke DQN harus berupa vektor fitur berdimensi tinggi yang mencakup semua informasi kontrol yang relevan, seperti posisi (x,y,z), orientasi (roll, pitch, yaw), kecepatan sudut/linear, dan data sensor lainnya.
+Imbalan (Reward): Fungsi imbalan harus dirancang untuk:
+Memberikan imbalan positif karena mencapai tujuan (misalnya, mencapai target posisi).
+- 3. Stabilitas Pelatihan
+Karena data dari sistem dinamis seringkali bising (noisy)
